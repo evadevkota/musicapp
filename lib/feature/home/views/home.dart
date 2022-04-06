@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 
 import 'package:fyp/core/widgets/main_drawer.dart';
 import 'package:fyp/feature/Karaoke/karaoke.dart';
+import 'package:fyp/feature/Mysongs/views/Mysongs.dart';
 import 'package:fyp/feature/aboutus/view/aboutus.dart';
+import 'package:fyp/feature/addsongs/views/addsongs.dart';
 import 'package:fyp/feature/artist/views/artist.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -198,7 +200,13 @@ class _HomePageState extends State<HomePage> {
                       child: Column(
                         children: [
                           ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => AddSongs()),
+                              );
+                            },
                             child: Container(
                               decoration: const BoxDecoration(
                                   borderRadius:
@@ -230,7 +238,13 @@ class _HomePageState extends State<HomePage> {
                       child: Column(
                         children: [
                           ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Mysongs()),
+                              );
+                            },
                             child: Container(
                               decoration: const BoxDecoration(
                                   borderRadius:
@@ -246,7 +260,7 @@ class _HomePageState extends State<HomePage> {
                               shape: const CircleBorder(),
                             ),
                           ),
-                          const Text('Playlist',
+                          const Text('My Playlist',
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 15,

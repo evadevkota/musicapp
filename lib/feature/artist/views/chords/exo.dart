@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:fyp/core/widgets/main_drawer.dart';
+import 'package:fyp/feature/artist/addpage.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 class EXO extends StatefulWidget {
@@ -52,7 +53,12 @@ class EXOState extends State<EXO> {
                     shape: RoundedRectangleBorder(
                         borderRadius: new BorderRadius.circular(30)),
                     color: Colors.black,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Addpdf()),
+                      );
+                    },
                     child: Text("+",
                         style: TextStyle(
                           fontSize: 20,
